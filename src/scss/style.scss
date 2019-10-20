@@ -1,0 +1,83 @@
+@import "@material/fab/mdc-fab";
+@import "@material/list/mdc-list";
+@import "@material/card/mdc-card";
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/textfield/mdc-text-field";
+@import "@material/floating-label/mdc-floating-label";
+@import "@material/textfield/icon/mdc-text-field-icon";
+@import "@material/notched-outline/mdc-notched-outline";
+
+@import "variables";
+
+body {
+	font-family: $fontFamily;
+	background-color: #dadada
+}
+.marginAddBottom {
+	margin-bottom: 0px;
+}
+.text-center {
+	text-align: center;
+}
+
+.greenHouseList {
+  background-color: #ffffff;
+  height: 90vh;
+  position:relative;
+}
+
+.buttomCard {
+   position: absolute;
+   bottom: 0px;
+   right: 0px;
+}
+
+.defaultBottomMargin {
+	margin-bottom: 24px;
+}
+
+.brownButton {
+    background-color: var(--mdc-theme-secondary, #795548);
+}
+
+.greenButton {
+    background-color: var(--mdc-theme-secondary, #4caf50);
+}
+
+.darkGreenButton {
+    background-color: var(--mdc-theme-secondary, #087f23);
+}
+
+.textCard {
+  background-color: #ffffff;
+  height: 90vh;
+}
+
+.selectCard {
+  background-color: #4caf50;
+}
+
+.selectGrit {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.textFieldRowBottom {
+  width:100%;
+  margin-bottom: 0px;
+  margin-top: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.textFieldRow {
+  width:100%;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.textBox {
+  margin: 24px;
+  flex-grow : 1;
+}
