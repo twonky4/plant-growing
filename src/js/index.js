@@ -122,19 +122,27 @@ function initGreenHouseButtons() {
 	});
 }
 
+function setTextFieldValue(fieldName, value) {
+	if(value == null) {
+		value = '';
+	}
+    let t = new MDCTextField(document.querySelector(fieldName).parentNode);
+    t.value = value;	
+}
+
 function drawDetails() {
 	let g = savePoint.greenHouses[savePoint.selectedGreenHouse];
 	if(g.selectedPot == -1) {
-		$('textarea.actionText').val(g.note);
-		$('input.actionSeed').val('');
-		$('input.actionFirst').val('');
-		$('input.actionFinish').val('');
+		setTextFieldValue('textarea.actionText', g.note); 
+		setTextFieldValue('input.actionSeed', '');
+		setTextFieldValue('input.actionFirst', '');
+		setTextFieldValue('input.actionFinish', '');
 	} else {
 		let p = g.pots[g.selectedPot];
-		$('textarea.actionText').val(p.note);
-		$('input.actionSeed').val(p.seedDate);
-		$('input.actionFirst').val(p.firstDate);
-		$('input.actionFinish').val(p.finishDate);
+		setTextFieldValue('textarea.actionText', p.note);
+		setTextFieldValue('input.actionSeed', p.seedDate);
+		setTextFieldValue('input.actionFirst', p.firstDate);
+		setTextFieldValue('input.actionFinish', p.finishDate);
 	}
 }
 
